@@ -38,6 +38,6 @@ public class CompteServiceImpl implements ICompteService {
 	@Override
 	public CompteBancaire findByIdCompteBancaire(Integer id) {
 		// TODO Auto-generated method stub
-		return null;
+		return iCBDao.findById(id).orElse(null);
 	}
 }
