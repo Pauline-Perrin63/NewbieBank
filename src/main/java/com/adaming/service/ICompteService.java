@@ -9,5 +9,6 @@ import com.adaming.model.FraisIncompressibles;
 public interface ICompteService {
 
 	public CompteBancaire saveCompteBancaire(CompteBancaire cb);
-
+	public CompteBancaire updateCompteBancaire(CompteBancaire cb);
+	
 }

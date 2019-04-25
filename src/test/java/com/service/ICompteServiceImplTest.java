@@ -13,6 +13,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import com.SpringBootRunner;
 import com.adaming.Dao.ICompteBancaireDao;
+import com.adaming.model.Client;
 import com.adaming.model.CompteBancaire;
 import com.adaming.service.CompteServiceImpl;
 
@@ -37,6 +38,13 @@ public class ICompteServiceImplTest {
 		LOGGER.info("--------------- Executing should_store_when_save_is_called test Of ClientServiceImplTest ---------------");
 		CompteBancaire compte = new CompteBancaire();
 		ICompteService.saveCompteBancaire(compte);
+		Mockito.verify(iCBDao).save(compte);
+	}
+	@Test
+	public void should_update_when_update_is_called() {
+		LOGGER.info("--------------- Executing should_update_when_update_is_called test Of ClientServiceImplTest ---------------");
+		CompteBancaire compte = new CompteBancaire();
+		ICompteService.updateCompteBancaire(compte);
 		Mockito.verify(iCBDao).save(compte);
 	}
 }
