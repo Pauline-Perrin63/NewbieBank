@@ -34,4 +34,10 @@ public class CompteServiceImpl implements ICompteService {
 		iCBDao.delete(cb);
 		
 	}
+
+	@Override
+	public CompteBancaire findByIdCompteBancaire(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

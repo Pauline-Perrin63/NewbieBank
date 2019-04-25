@@ -35,14 +35,14 @@ public class ICompteServiceImplTest {
 
 	@Test
 	public void should_store_when_save_is_called() {
-		LOGGER.info("--------------- Executing should_store_when_save_is_called test Of ClientServiceImplTest ---------------");
+		LOGGER.info("--------------- Executing should_store_when_save_is_called test Of ICompteServiceImplTest ---------------");
 		CompteBancaire compte = new CompteBancaire();
 		ICompteService.saveCompteBancaire(compte);
 		Mockito.verify(iCBDao).save(compte);
 	}
 	@Test
 	public void should_update_when_update_is_called() {
-		LOGGER.info("--------------- Executing should_update_when_update_is_called test Of ClientServiceImplTest ---------------");
+		LOGGER.info("--------------- Executing should_update_when_update_is_called test Of ICompteServiceImplTest ---------------");
 		CompteBancaire compte = new CompteBancaire();
 		ICompteService.updateCompteBancaire(compte);
 		Mockito.verify(iCBDao).save(compte);
@@ -50,9 +50,17 @@ public class ICompteServiceImplTest {
 	
 	@Test
 	public void should_delete_when_delete_is_called() {
-		LOGGER.info("--------------- Executing should_delete_when_delete_is_called test Of ClientServiceImplTest ---------------");
+		LOGGER.info("--------------- Executing should_delete_when_delete_is_called test Of ICompteServiceImplTest ---------------");
 		CompteBancaire compte = new CompteBancaire();
 		ICompteService.deleteCompteBancaire(compte);
 		Mockito.verify(iCBDao).delete(compte);
+	}
+	
+	@Test
+	public void should_search_by_Id_when_findById_is_called() {
+		LOGGER.info("--------------- Executing should_search_By_Id_when_findById_is_called test Of ICompteServiceImplTest ---------------");
+		Integer id= new Integer (1);
+		ICompteService.findByIdCompteBancaire(id);
+		Mockito.verify(iCBDao).findById(id);
 	}
 }

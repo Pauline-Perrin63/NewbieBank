@@ -1,4 +1,14 @@
 -------------------------------------------------------------------------------
 Test set: com.service.ICompteServiceImplTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.062 s - in com.service.ICompteServiceImplTest
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.085 s <<< FAILURE! - in com.service.ICompteServiceImplTest
+should_search_by_Id_when_findById_is_called(com.service.ICompteServiceImplTest)  Time elapsed: 0.04 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+iCBDao.findById(1);
+-> at com.service.ICompteServiceImplTest.should_search_by_Id_when_findById_is_called(ICompteServiceImplTest.java:64)
+Actually, there were zero interactions with this mock.
+
+	at com.service.ICompteServiceImplTest.should_search_by_Id_when_findById_is_called(ICompteServiceImplTest.java:64)
+
