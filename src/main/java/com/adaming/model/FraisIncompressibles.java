@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class FraisIncompressibles implements Serializable{
@@ -15,6 +16,8 @@ public class FraisIncompressibles implements Serializable{
 	private int IdFraisIncompressibles;
 	private String nomFrais;
 	private Double montantFrais;
+	@ManyToOne
+	CompteBancaire compte;
 	public FraisIncompressibles() {
 		super();
 		// TODO Auto-generated constructor stub

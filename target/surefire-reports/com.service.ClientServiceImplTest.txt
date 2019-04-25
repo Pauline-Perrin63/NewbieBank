@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.service.ClientServiceImplTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 9.439 s <<< FAILURE! - in com.service.ClientServiceImplTest
-should_search_all_when_findAll_is_called(com.service.ClientServiceImplTest)  Time elapsed: 0.081 s  <<< FAILURE!
+Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 11.505 s <<< FAILURE! - in com.service.ClientServiceImplTest
+should_search_all_when_findAll_is_called(com.service.ClientServiceImplTest)  Time elapsed: 0.047 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -12,7 +12,7 @@ Actually, there were zero interactions with this mock.
 
 	at com.service.ClientServiceImplTest.should_search_all_when_findAll_is_called(ClientServiceImplTest.java:64)
 
-should_update_when_update_is_called(com.service.ClientServiceImplTest)  Time elapsed: 0.032 s  <<< FAILURE!
+should_update_when_update_is_called(com.service.ClientServiceImplTest)  Time elapsed: 0.031 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -24,7 +24,7 @@ Actually, there were zero interactions with this mock.
 
 	at com.service.ClientServiceImplTest.should_update_when_update_is_called(ClientServiceImplTest.java:49)
 
-should_store_when_save_is_called(com.service.ClientServiceImplTest)  Time elapsed: 0.017 s  <<< FAILURE!
+should_store_when_save_is_called(com.service.ClientServiceImplTest)  Time elapsed: 0.016 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -36,7 +36,7 @@ Actually, there were zero interactions with this mock.
 
 	at com.service.ClientServiceImplTest.should_store_when_save_is_called(ClientServiceImplTest.java:41)
 
-should_delete_when_delete_is_called(com.service.ClientServiceImplTest)  Time elapsed: 0.018 s  <<< FAILURE!
+should_delete_when_delete_is_called(com.service.ClientServiceImplTest)  Time elapsed: 0.015 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
