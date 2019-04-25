@@ -21,11 +21,13 @@ public class ClientServiceImpl implements IClientService{
 
 	public ClientServiceImpl(IClientDao clientDao) {
 		// TODO Auto-generated constructor stub
+		this.iClientDao = clientDao;
+		
 	}
 
 	public Client saveClient(Client c) {
 		// TODO Auto-generated method stub
-		return null;
+		return  iClientDao.save(c);
 	}
 
 	public Client updateClient(Client c) {
