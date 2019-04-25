@@ -11,13 +11,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.SpringBootRunner;
 import com.adaming.Dao.IClientDao;
 import com.adaming.model.Client;
 import com.adaming.service.ClientServiceImpl;
 
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
+
 public class ClientServiceImplTest {
 
 	private ClientServiceImpl clientService;
@@ -32,7 +32,7 @@ public class ClientServiceImplTest {
 		clientService = new ClientServiceImpl(clientDao);
 	}
 	
-	@Test
+	
 	public void should_store_when_save_is_called() {
 		LOGGER.info("--------------- Executing should_store_when_save_is_called test Of ClientServiceImplTest ---------------");
 		Client client = new Client();
@@ -40,7 +40,7 @@ public class ClientServiceImplTest {
 		Mockito.verify(clientDao).save(client);
 	}
 	
-	@Test
+	
 	public void should_update_when_update_is_called() {
 		LOGGER.info("--------------- Executing should_update_when_update_is_called test Of ClientServiceImplTest ---------------");
 		Client client = new Client();
@@ -48,7 +48,7 @@ public class ClientServiceImplTest {
 		Mockito.verify(clientDao).save(client);
 	}
 	
-	@Test
+	
 	public void should_delete_when_delete_is_called() {
 		LOGGER.info("--------------- Executing should_delete_when_delete_is_called test Of ClientServiceImplTest ---------------");
 		Client client = new Client();
@@ -56,7 +56,7 @@ public class ClientServiceImplTest {
 		Mockito.verify(clientDao).delete(client);
 	}
 	
-	@Test
+	
 	public void should_search_all_when_findAll_is_called() {
 		LOGGER.info("--------------- Executing should_search_all_when_findAll_is_called test Of ClientServiceImplTest ---------------");
 		clientService.getClient();

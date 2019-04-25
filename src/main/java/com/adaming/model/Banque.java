@@ -1,11 +1,13 @@
 package com.adaming.model;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Banque implements Serializable{
@@ -16,6 +18,9 @@ public class Banque implements Serializable{
 	private String nomBanque;
 	private String adresseBanque;
 	private String telBanque;
+	@OneToMany
+	List<CompteBancaire> comptes;
+	
 	public Banque() {
 		super();
 		// TODO Auto-generated constructor stub

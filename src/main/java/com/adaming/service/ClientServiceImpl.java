@@ -38,10 +38,20 @@ public class ClientServiceImpl implements IClientService{
 		
 	}
 
-	public List<Client> getClient() {
+	@Override
+	public Client findByIdClient(Integer id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public List<Client> findAllClient() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+	
 
 
 

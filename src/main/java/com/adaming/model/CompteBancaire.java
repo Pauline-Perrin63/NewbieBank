@@ -2,26 +2,38 @@ package com.adaming.model;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+
 
 @Entity
 public class CompteBancaire implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@OneToMany(mappedBy="compteBancaire")
 	private int idCompte;
 	private int codeCompte;
 	private Date dateCreation;
 	private double solde;
 	private String codeClient;
-	
-	
+	@ManyToOne
+	private Client client;
+	@ManyToOne
+	private Banque banque;
+	@OneToMany
+	List<FraisIncompressibles> frais;
+	@OneToMany
+	List<VirementBancaire> viremis;
+	@OneToMany
+	List<VirementBancaire> virrecu;
 	
 	public CompteBancaire() {
 		super();

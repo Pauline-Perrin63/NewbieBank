@@ -2,33 +2,38 @@ package com.adaming.model;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Client implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int idClient;
+	private int id;
 	private String nomClient;
 	private String prenomClient;
 	private String adresseClient;
 	private int age;
-	private Date dateEnregistrement;
+	private String dateEnregistrement;
 	private String sexe;
 	private String telClient;
+	@OneToMany
+	List<CompteBancaire> Comptes;
 	public Client() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Client(int idClient, String nomClient, String prenomClient, String adresseClient, int age,
-			Date dateEnregistrement, String sexe, String telClient) {
+	public Client(int id, String nomClient, String prenomClient, String adresseClient, int age,
+			String dateEnregistrement, String sexe, String telClient) {
 		super();
-		this.idClient = idClient;
+		this.id = id;
 		this.nomClient = nomClient;
 		this.prenomClient = prenomClient;
 		this.adresseClient = adresseClient;
@@ -37,11 +42,11 @@ public class Client implements Serializable {
 		this.sexe = sexe;
 		this.telClient = telClient;
 	}
-	public int getIdClient() {
-		return idClient;
+	public int getId() {
+		return id;
 	}
-	public void setIdClient(int idClient) {
-		this.idClient = idClient;
+	public void setId(int id) {
+		this.id = id;
 	}
 	public String getNomClient() {
 		return nomClient;
@@ -67,10 +72,10 @@ public class Client implements Serializable {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	public Date getDateEnregistrement() {
+	public String getDateEnregistrement() {
 		return dateEnregistrement;
 	}
-	public void setDateEnregistrement(Date dateEnregistrement) {
+	public void setDateEnregistrement(String dateEnregistrement) {
 		this.dateEnregistrement = dateEnregistrement;
 	}
 	public String getSexe() {
@@ -87,10 +92,11 @@ public class Client implements Serializable {
 	}
 	@Override
 	public String toString() {
-		return "Client [idClient=" + idClient + ", nomClient=" + nomClient + ", prenomClient=" + prenomClient
+		return "Client [id=" + id + ", nomClient=" + nomClient + ", prenomClient=" + prenomClient
 				+ ", adresseClient=" + adresseClient + ", age=" + age + ", dateEnregistrement=" + dateEnregistrement
 				+ ", sexe=" + sexe + ", telClient=" + telClient + "]";
 	}
+	
 	
 	
 }
