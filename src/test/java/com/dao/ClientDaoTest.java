@@ -17,7 +17,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import com.adaming.Dao.IClientDao;
 import com.adaming.model.Client;
-import com.entity.Client;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
