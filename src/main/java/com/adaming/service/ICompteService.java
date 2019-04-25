@@ -9,8 +9,5 @@ import com.adaming.model.FraisIncompressibles;
 public interface ICompteService {
 
 	public CompteBancaire saveCompteBancaire(CompteBancaire cb);
-	public CompteBancaire updateCompteBancaire(CompteBancaire cb);
-	public void deleteCompteBancaire(CompteBancaire cb);
-	public CompteBancaire findByIdCompteBancaire (Integer id);
-	public List<CompteBancaire> findAllCompteBancaire ();
+
 }

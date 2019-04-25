@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.adaming.Dao.IClientDao;
 import com.adaming.Dao.ICompteBancaireDao;
 import com.adaming.model.CompteBancaire;
 import com.adaming.model.FraisIncompressibles;
@@ -11,35 +12,17 @@ import com.adaming.model.FraisIncompressibles;
 public class CompteServiceImpl implements ICompteService {
 
 	@Autowired
-	ICompteBancaireDao iCompteBancaireDao;
+	ICompteBancaireDao iCBDao;
+
+	public CompteServiceImpl(ICompteBancaireDao iCBDao) {
+		// TODO Auto-generated constructor stub
+		this.iCBDao = iCBDao;
+		
+	}
 	
 	@Override
 	public CompteBancaire saveCompteBancaire(CompteBancaire cb) {
 		// TODO Auto-generated method stub
-		return this.iCompteBancaireDao.save(cb);
+		return null;
 	}
-
-	@Override
-	public CompteBancaire updateCompteBancaire(CompteBancaire cb) {
-		// TODO Auto-generated method stub
-		return this.iCompteBancaireDao.save(cb);
-	}
-
-	@Override
-	public void deleteCompteBancaire(CompteBancaire cb) {
-		// TODO Auto-generated method stub
-		this.iCompteBancaireDao.delete(cb);
-	}
-
-	@Override
-	public List<CompteBancaire> getCompteBancaire() {
-		// TODO Auto-generated method stub
-		return this.iCompteBancaireDao.findAll();
-	}
-	
-	public CompteBancaire findByIdCompteBancaire(Integer id) {
-		// TODO Auto-generated method stub
-		return this.iCompteBancaireDao.findById(id).orElse(null);
-	}
-
 }
