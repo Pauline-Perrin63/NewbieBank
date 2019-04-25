@@ -1,16 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.service.ICompteServiceImplTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.062 s <<< FAILURE! - in com.service.ICompteServiceImplTest
-should_update_when_update_is_called(com.service.ICompteServiceImplTest)  Time elapsed: 0.031 s  <<< FAILURE!
-org.mockito.exceptions.verification.WantedButNotInvoked: 
-
-Wanted but not invoked:
-iCBDao.save(
-    CompteBancaire [idCompte=0, codeCompte=0, dateCreation=null, solde=0.0, codeClient=null]
-);
--> at com.service.ICompteServiceImplTest.should_update_when_update_is_called(ICompteServiceImplTest.java:48)
-Actually, there were zero interactions with this mock.
-
-	at com.service.ICompteServiceImplTest.should_update_when_update_is_called(ICompteServiceImplTest.java:48)
-
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s - in com.service.ICompteServiceImplTest

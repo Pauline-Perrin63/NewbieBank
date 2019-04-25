@@ -25,6 +25,6 @@ public class CompteServiceImpl implements ICompteService {
 	@Override
 	public CompteBancaire updateCompteBancaire(CompteBancaire cb) {
 		// TODO Auto-generated method stub
-		return null;
+		return iCBDao.save(cb);
 	}
 }
