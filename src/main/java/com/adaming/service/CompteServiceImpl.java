@@ -46,6 +46,6 @@ public class CompteServiceImpl implements ICompteService {
 	@Override
 	public List<CompteBancaire> findAllCompteBancaire() {
 		// TODO Auto-generated method stub
-		return null;
+		return iCBDao.findAll();
 	}
 }
