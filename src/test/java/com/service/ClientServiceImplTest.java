@@ -11,13 +11,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.SpringBootRunner;
 import com.adaming.Dao.IClientDao;
 import com.adaming.model.Client;
 import com.adaming.service.ClientServiceImpl;
 
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(classes = SpringBootRunner.class)
 public class ClientServiceImplTest {
 
 	private ClientServiceImpl clientService;
