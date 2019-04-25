@@ -58,9 +58,17 @@ public class ClientServiceImplTest {
 	}
 	
 	@Test
+	public void should_search_by_Id_when_findById_is_called() {
+		LOGGER.info("--------------- Executing should_search_By_Id_when_findById_is_called test Of ClientServiceImplTest ---------------");
+		Integer id= new Integer (1);
+		clientService.findByIdClient(id);
+		Mockito.verify(clientDao).findById(id);
+	}
+	
+	@Test
 	public void should_search_all_when_findAll_is_called() {
 		LOGGER.info("--------------- Executing should_search_all_when_findAll_is_called test Of ClientServiceImplTest ---------------");
-		clientService.getClient();
+		clientService.findAllClient();
 		Mockito.verify(clientDao).findAll();
 	}
 }
