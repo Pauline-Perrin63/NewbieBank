@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.service.ClientServiceImplTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.097 s - in com.service.ClientServiceImplTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.389 s - in com.service.ClientServiceImplTest
