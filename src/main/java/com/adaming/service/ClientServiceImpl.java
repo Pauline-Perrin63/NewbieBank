@@ -32,7 +32,7 @@ public class ClientServiceImpl implements IClientService{
 
 	public Client updateClient(Client c) {
 		// TODO Auto-generated method stub
-		return null;
+		return  iClientDao.save(c);
 	}
 
 	public void deleteClient(Client c) {

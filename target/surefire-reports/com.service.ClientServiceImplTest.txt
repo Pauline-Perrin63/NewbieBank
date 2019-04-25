@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: com.service.ClientServiceImplTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 11.003 s <<< FAILURE! - in com.service.ClientServiceImplTest
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 11.303 s <<< FAILURE! - in com.service.ClientServiceImplTest
 should_search_all_when_findAll_is_called(com.service.ClientServiceImplTest)  Time elapsed: 0.031 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
@@ -12,19 +12,7 @@ Actually, there were zero interactions with this mock.
 
 	at com.service.ClientServiceImplTest.should_search_all_when_findAll_is_called(ClientServiceImplTest.java:64)
 
-should_update_when_update_is_called(com.service.ClientServiceImplTest)  Time elapsed: 0 s  <<< FAILURE!
-org.mockito.exceptions.verification.WantedButNotInvoked: 
-
-Wanted but not invoked:
-clientDao.save(
-    Client [idClient=0, nomClient=null, prenomClient=null, adresseClient=null, age=0, dateEnregistrement=null, sexe=null, telClient=null]
-);
--> at com.service.ClientServiceImplTest.should_update_when_update_is_called(ClientServiceImplTest.java:49)
-Actually, there were zero interactions with this mock.
-
-	at com.service.ClientServiceImplTest.should_update_when_update_is_called(ClientServiceImplTest.java:49)
-
-should_delete_when_delete_is_called(com.service.ClientServiceImplTest)  Time elapsed: 0 s  <<< FAILURE!
+should_delete_when_delete_is_called(com.service.ClientServiceImplTest)  Time elapsed: 0.032 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
