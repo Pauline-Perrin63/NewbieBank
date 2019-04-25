@@ -47,4 +47,12 @@ public class ICompteServiceImplTest {
 		ICompteService.updateCompteBancaire(compte);
 		Mockito.verify(iCBDao).save(compte);
 	}
+	
+	@Test
+	public void should_delete_when_delete_is_called() {
+		LOGGER.info("--------------- Executing should_delete_when_delete_is_called test Of ClientServiceImplTest ---------------");
+		CompteBancaire compte = new CompteBancaire();
+		ICompteService.deleteCompteBancaire(compte);
+		Mockito.verify(iCBDao).delete(compte);
+	}
 }

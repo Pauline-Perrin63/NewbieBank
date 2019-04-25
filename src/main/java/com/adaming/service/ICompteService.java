@@ -10,5 +10,6 @@ public interface ICompteService {
 
 	public CompteBancaire saveCompteBancaire(CompteBancaire cb);
 	public CompteBancaire updateCompteBancaire(CompteBancaire cb);
+	public void deleteCompteBancaire(CompteBancaire cb);
 	
 }

@@ -27,4 +27,10 @@ public class CompteServiceImpl implements ICompteService {
 		// TODO Auto-generated method stub
 		return iCBDao.save(cb);
 	}
+
+	@Override
+	public void deleteCompteBancaire(CompteBancaire cb) {
+		// TODO Auto-generated method stub
+		
+	}
 }
