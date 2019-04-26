@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+
 @Entity
 public class VirementBancaire implements Serializable {
 
@@ -24,6 +25,7 @@ public class VirementBancaire implements Serializable {
 	@ManyToOne
 	CompteBancaire virementRecu;
 
+
 	public VirementBancaire() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -31,6 +33,7 @@ public class VirementBancaire implements Serializable {
 
 	public VirementBancaire(int idVirement, double montantVirement, String destinataire, int idDestinataire,
 			String emetteur, int idEmetteur, CompteBancaire virementEmis, CompteBancaire virementRecu) {
+
 		super();
 		this.idVirement = idVirement;
 		this.montantVirement = montantVirement;
@@ -40,6 +43,7 @@ public class VirementBancaire implements Serializable {
 		this.idEmetteur = idEmetteur;
 		this.virementEmis = virementEmis;
 		this.virementRecu = virementRecu;
+
 	}
 
 	public int getIdVirement() {
@@ -106,6 +110,8 @@ public class VirementBancaire implements Serializable {
 		this.virementRecu = virementRecu;
 	}
 
+
+
 	@Override
 	public String toString() {
 		return "VirementBancaire [idVirement=" + idVirement + ", montantVirement=" + montantVirement + ", destinataire="
@@ -113,4 +119,7 @@ public class VirementBancaire implements Serializable {
 				+ idEmetteur + ", virementEmis=" + virementEmis + ", virementRecu=" + virementRecu + "]";
 	}
 
+
+
 }
+

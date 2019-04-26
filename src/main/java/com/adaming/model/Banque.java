@@ -20,6 +20,7 @@ public class Banque implements Serializable{
 	private String telBanque;
 	@OneToMany
 	List <CompteBancaire> compte;
+
 	public Banque() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -54,6 +55,13 @@ public class Banque implements Serializable{
 	}
 	public void setTelBanque(String telBanque) {
 		this.telBanque = telBanque;
+	}
+	
+	public List<CompteBancaire> getCompte() {
+		return compte;
+	}
+	public void setCompte(List<CompteBancaire> compte) {
+		this.compte = compte;
 	}
 	@Override
 	public String toString() {

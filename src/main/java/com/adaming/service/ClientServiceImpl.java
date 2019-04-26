@@ -43,17 +43,16 @@ public class ClientServiceImpl implements IClientService{
 
 	@Override
 	public Client findByIdClient(Integer id) {
-		// TODO Auto-generated method stub
+
 		return iClientDao.findById(id).orElse(null);
 	}
 
 	@Override
 	public List<Client> findAllClient() {
-		// TODO Auto-generated method stub
+
 		return iClientDao.findAll();
 	}
 
-	
 
 
 
