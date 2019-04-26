@@ -8,8 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
@@ -214,19 +212,19 @@ public class CompteBancaire implements Serializable {
 
 	public double montantDecouvert() {
 		if (solde<0) {
-			return -solde;
+			return solde;
 		}
 		else {
-			return 0;
+			return solde;
 		}
 	}
 	
 	public double Plafondautorise() {
 		if (solde>100000) {
-			return +solde;
+			return solde;
 		}
 		else {
-			return 100000;
+			return solde;
 		}
 	}
 }
