@@ -1,17 +1,12 @@
 package com.adaming.model;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-<<<<<<< HEAD
-=======
-import javax.persistence.ManyToOne;
->>>>>>> d4a4c1e014d627f7acf895e774b581aa44204016
 import javax.persistence.OneToMany;
 
 @Entity

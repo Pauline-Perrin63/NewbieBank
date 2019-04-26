@@ -17,12 +17,10 @@ import com.adaming.model.Client;
 import com.adaming.service.ClientServiceImpl;
 
 
-<<<<<<< HEAD
+
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = SpringBootRunner.class)
-=======
 
->>>>>>> d4a4c1e014d627f7acf895e774b581aa44204016
 public class ClientServiceImplTest {
 
 	private ClientServiceImpl clientService;
@@ -61,7 +59,7 @@ public class ClientServiceImplTest {
 		Mockito.verify(clientDao).delete(client);
 	}
 	
-<<<<<<< HEAD
+
 	@Test
 	public void should_search_by_Id_when_findById_is_called() {
 		LOGGER.info("--------------- Executing should_search_By_Id_when_findById_is_called test Of ClientServiceImplTest ---------------");
@@ -71,9 +69,6 @@ public class ClientServiceImplTest {
 	}
 	
 	@Test
-=======
-	
->>>>>>> d4a4c1e014d627f7acf895e774b581aa44204016
 	public void should_search_all_when_findAll_is_called() {
 		LOGGER.info("--------------- Executing should_search_all_when_findAll_is_called test Of ClientServiceImplTest ---------------");
 		clientService.findAllClient();
