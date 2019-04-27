@@ -39,9 +39,6 @@ public class CompteBancaire implements Serializable {
 		// TODO Auto-generated constructor stub
 	}
 
-
-
-
 	public CompteBancaire(int idCompte, int codeCompte, Date dateCreation, double solde, double decouvert,
 			double plafond, String codeClient, Client client, Banque banque, List<FraisIncompressibles> frais,
 			List<VirementBancaire> virementEmis, List<VirementBancaire> virementRecu) {
@@ -182,7 +179,5 @@ public class CompteBancaire implements Serializable {
 			return +solde;
 		} else {
 			return solde;
-
-	}
 }
-}
+}}
