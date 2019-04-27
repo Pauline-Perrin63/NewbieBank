@@ -25,7 +25,7 @@ public class ClientController {
 		@Autowired
 		IClientService clientService;
 
-		public void ClientController(ClientServiceImpl clientServiceImpl) {
+		public ClientController(ClientServiceImpl clientServiceImpl) {
 			this.clientService = clientServiceImpl;
 		}
 

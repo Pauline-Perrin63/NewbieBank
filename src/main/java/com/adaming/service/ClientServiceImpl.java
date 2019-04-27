@@ -21,37 +21,38 @@ public class ClientServiceImpl implements IClientService{
 
 	public ClientServiceImpl(IClientDao clientDao) {
 		// TODO Auto-generated constructor stub
+		this.iClientDao = clientDao;
+		
 	}
 
 	public Client saveClient(Client c) {
 		// TODO Auto-generated method stub
-		return null;
+		return  iClientDao.save(c);
 	}
 
 	public Client updateClient(Client c) {
 		// TODO Auto-generated method stub
-		return null;
+		return  iClientDao.save(c);
 	}
 
 	public void deleteClient(Client c) {
 		// TODO Auto-generated method stub
+		iClientDao.delete(c);
 		
 	}
 
 	@Override
 	public Client findByIdClient(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+
+		return iClientDao.findById(id).orElse(null);
 	}
 
 	@Override
 	public List<Client> findAllClient() {
-		// TODO Auto-generated method stub
-		return null;
+
+		return iClientDao.findAll();
 	}
 
-	
-	
 
 
 

@@ -7,7 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+
 
 @Entity
 public class FraisIncompressibles implements Serializable{
@@ -18,17 +18,26 @@ public class FraisIncompressibles implements Serializable{
 	private String nomFrais;
 	private Double montantFrais;
 	@ManyToOne
-	private CompteBancaire comptes;
+	private CompteBancaire compte;
+
 	public FraisIncompressibles() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public FraisIncompressibles(int idFraisIncompressibles, String nomFrais, Double montantFrais) {
+
+
+	
+	public FraisIncompressibles(int idFraisIncompressibles, String nomFrais, Double montantFrais,
+			CompteBancaire compte) {
 		super();
 		IdFraisIncompressibles = idFraisIncompressibles;
 		this.nomFrais = nomFrais;
 		this.montantFrais = montantFrais;
+		this.compte = compte;
 	}
+
+
+
 	public int getIdFraisIncompressibles() {
 		return IdFraisIncompressibles;
 	}
@@ -47,6 +56,20 @@ public class FraisIncompressibles implements Serializable{
 	public void setMontantFrais(Double montantFrais) {
 		this.montantFrais = montantFrais;
 	}
+	
+	
+	public CompteBancaire getCompte() {
+		return compte;
+	}
+
+
+
+	public void setCompte(CompteBancaire compte) {
+		this.compte = compte;
+	}
+
+
+
 	@Override
 	public String toString() {
 		return "FraisIncompressibles [IdFraisIncompressibles=" + IdFraisIncompressibles + ", nomFrais=" + nomFrais
