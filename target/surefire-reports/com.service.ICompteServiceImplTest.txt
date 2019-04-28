@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.service.ICompteServiceImplTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.11 s - in com.service.ICompteServiceImplTest
+=======
 Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.076 s - in com.service.ICompteServiceImplTest
+>>>>>>> 1c5969c6841fc215d787f755df32053656752395

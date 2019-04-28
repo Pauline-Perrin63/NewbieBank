@@ -1,5 +1,5 @@
 package com.adaming.controller;
 
-public class BanqueController {
+public class CompteController {
 
 }

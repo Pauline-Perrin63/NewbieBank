@@ -1,3 +1,4 @@
+
 package com.service;
 
 import org.junit.Before;
@@ -71,3 +72,4 @@ public class ICompteServiceImplTest {
 		Mockito.verify(iCBDao).findAll();
 	}
 }
+

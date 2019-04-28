@@ -28,10 +28,12 @@ C:\Users\IN-LY-027\Desktop\NewbieBank\NewbieBank\src\main\java\com\adaming\servi
 C:\Users\IN-LY-027\Desktop\NewbieBank\NewbieBank\src\main\java\com\adaming\Dao\IClientDao.java
 C:\Users\IN-LY-027\Desktop\NewbieBank\NewbieBank\src\main\java\com\adaming\model\VirementBancaire.java
 C:\Users\IN-LY-027\Desktop\NewbieBank\NewbieBank\src\main\java\com\adaming\service\ICompteService.java
+C:\Users\IN-LY-027\Desktop\NewbieBank\NewbieBank\src\main\java\com\adaming\controller\ClientController.java
 C:\Users\IN-LY-027\Desktop\NewbieBank\NewbieBank\src\main\java\com\adaming\service\IFraisIncompressiblesService.java
 C:\Users\IN-LY-027\Desktop\NewbieBank\NewbieBank\src\main\java\com\adaming\Dao\IbanqueDao.java
 C:\Users\IN-LY-027\Desktop\NewbieBank\NewbieBank\src\main\java\com\adaming\model\FraisIncompressibles.java
 C:\Users\IN-LY-027\Desktop\NewbieBank\NewbieBank\src\main\java\com\adaming\service\ClientServiceImpl.java
+C:\Users\IN-LY-027\Desktop\NewbieBank\NewbieBank\src\main\java\com\adaming\controller\CompteController.java
 C:\Users\IN-LY-027\Desktop\NewbieBank\NewbieBank\src\main\java\com\SpringBootRunner.java
 C:\Users\IN-LY-027\Desktop\NewbieBank\NewbieBank\src\main\java\com\adaming\service\VirementBancaireServiceImpl.java
 C:\Users\IN-LY-027\Desktop\NewbieBank\NewbieBank\src\main\java\com\adaming\model\Client.java

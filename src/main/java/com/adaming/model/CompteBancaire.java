@@ -8,13 +8,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class CompteBancaire implements Serializable {
 
 	@Id
@@ -41,9 +38,6 @@ public class CompteBancaire implements Serializable {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
-
-
 
 	public CompteBancaire(int idCompte, int codeCompte, Date dateCreation, double solde, double decouvert,
 			double plafond, String codeClient, Client client, Banque banque, List<FraisIncompressibles> frais,
@@ -171,10 +165,12 @@ public class CompteBancaire implements Serializable {
 	}
 
 	public double montantDecouvert() {
+
 		if (solde < 0) {
 			return -solde;
 		} else {
-			return 0;
+			return solde;
+
 		}
 	}
 
@@ -182,7 +178,6 @@ public class CompteBancaire implements Serializable {
 		if (solde > 100000) {
 			return +solde;
 		} else {
-			return 100000;
-		}
-	}
+			return solde;
 }
+}}
