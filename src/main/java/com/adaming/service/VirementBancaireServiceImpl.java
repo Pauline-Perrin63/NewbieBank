@@ -3,10 +3,11 @@ package com.adaming.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.adaming.Dao.IVirementBancaireDao;
 import com.adaming.model.VirementBancaire;
-
+@Service
 public class VirementBancaireServiceImpl implements IVirementBancaireService {
 
 	@Autowired

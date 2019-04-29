@@ -3,10 +3,11 @@ package com.adaming.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.adaming.Dao.IFraisIncompressiblesDao;
 import com.adaming.model.FraisIncompressibles;
-
+@Service
 public class FraisIncompressiblesServiceImpl implements IFraisIncompressiblesService {
 	
 	@Autowired

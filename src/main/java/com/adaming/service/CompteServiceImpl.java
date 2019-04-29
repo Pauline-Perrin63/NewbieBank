@@ -3,10 +3,12 @@ package com.adaming.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.adaming.Dao.ICompteBancaireDao;
 import com.adaming.model.CompteBancaire;
 
+@Service
 public class CompteServiceImpl implements ICompteService {
 
 	@Autowired
