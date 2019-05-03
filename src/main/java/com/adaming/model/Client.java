@@ -42,6 +42,12 @@ public class Client implements Serializable {
 		this.sexe = sexe;
 		this.telClient = telClient;
 	}
+	
+	public Client(String nomClient, String prenomClient) {
+		super();
+		this.nomClient = nomClient;
+		this.prenomClient = prenomClient;
+	}
 	public int getId() {
 		return id;
 	}

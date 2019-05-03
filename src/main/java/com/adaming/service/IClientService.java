@@ -13,5 +13,4 @@ public interface IClientService {
     public void deleteClient(Client c);
     public Client findByIdClient (Integer id);
 	public List<Client> findAllClient ();
-	
 }
