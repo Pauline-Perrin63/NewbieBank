@@ -18,7 +18,7 @@ public class CompteBancaire implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idCompte;
 	private int codeCompte;
-	private Date dateCreation;
+	private String dateCreation;
 	private double solde;
 	private double decouvert;
 	private double plafond;
@@ -39,7 +39,7 @@ public class CompteBancaire implements Serializable {
 		// TODO Auto-generated constructor stub
 	}
 
-	public CompteBancaire(int idCompte, int codeCompte, Date dateCreation, double solde, double decouvert,
+	public CompteBancaire(int idCompte, int codeCompte, String dateCreation, double solde, double decouvert,
 			double plafond, String codeClient, Client client, Banque banque, List<FraisIncompressibles> frais,
 			List<VirementBancaire> virementEmis, List<VirementBancaire> virementRecu) {
 		super();
@@ -84,11 +84,11 @@ public class CompteBancaire implements Serializable {
 		this.codeCompte = codeCompte;
 	}
 
-	public Date getDateCreation() {
+	public String getDateCreation() {
 		return dateCreation;
 	}
 
-	public void setDateCreation(Date dateCreation) {
+	public void setDateCreation(String dateCreation) {
 		this.dateCreation = dateCreation;
 	}
 

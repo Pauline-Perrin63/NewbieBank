@@ -3,18 +3,21 @@ package com.adaming.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.adaming.model.FraisIncompressibles;
 import com.adaming.service.FraisIncompressiblesServiceImpl;
 import com.adaming.service.IFraisIncompressiblesService;
+
 
 
 
@@ -30,34 +33,39 @@ public class FraisIncompressiblesController {
 		this.fraisIncompressiblesService = fraisIncompressiblesServiceImpl;
 	}
 
-	@RequestMapping(value = "/ajouterFraisIncompressibles", method = RequestMethod.POST)
-	public ResponseEntity<FraisIncompressibles> createFraisIncompressibles(@RequestBody FraisIncompressibles fraisIncompressibles) {
-		fraisIncompressibles = this.fraisIncompressiblesService.saveFraisIncompressible(fraisIncompressibles);
-		return new ResponseEntity<FraisIncompressibles>(fraisIncompressibles, HttpStatus.OK);
+	@PostMapping(value = "/ajouterFraisIncompressibles", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+	public FraisIncompressibles saveFraisIncompressible(@RequestBody FraisIncompressibles fraisIncompressibles) {
+		return this.fraisIncompressiblesService.saveFraisIncompressible(fraisIncompressibles);
 	}
 	
-	@RequestMapping(value = "/modifierFraisIncompressibles", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<FraisIncompressibles> updateFraisIncompressibles(@RequestBody FraisIncompressibles FraisIncompressibles) {
-		FraisIncompressibles = this.fraisIncompressiblesService.updateFraisIncompressible(FraisIncompressibles);
-		return new ResponseEntity<FraisIncompressibles>(FraisIncompressibles, HttpStatus.OK);
+	@PutMapping("/{id}")
+	public FraisIncompressibles updateFraisIncompressibles (@RequestBody FraisIncompressibles fraisIncompressibles, @PathVariable int id) {
+		if(fraisIncompressiblesService.updateFraisIncompressible(fraisIncompressibles)== null) {
+			return null;
+		} else {
+			return fraisIncompressiblesService.updateFraisIncompressible(fraisIncompressibles);
+		}
+	}
+	@DeleteMapping("/{id}")
+	public void deleteFraisIncompressibles(@PathVariable int id) {
+		if(fraisIncompressiblesService.findByIdFraisIncompressible(id)!= null) {
+			fraisIncompressiblesService.deleteFraisIncompressible(fraisIncompressiblesService.findByIdFraisIncompressible(id));
+		}
+	} 
+	
+	@GetMapping(value = "/findById/{id}")
+	public FraisIncompressibles getById(@PathVariable int id) {
+		if(fraisIncompressiblesService.findByIdFraisIncompressible(id)== null) {
+			return null;
+		} else {
+			return fraisIncompressiblesService.findByIdFraisIncompressible(id);
+		}
 	}
 	
-	@RequestMapping(value = "/supprimerFraisIncompressibles", method = RequestMethod.DELETE)
-	public ResponseEntity<FraisIncompressibles> deleteFraisIncompressibles(@RequestBody FraisIncompressibles fraisIncompressibles) {
-		this.fraisIncompressiblesService.deleteFraisIncompressible(fraisIncompressibles);
-		return new ResponseEntity<FraisIncompressibles>(fraisIncompressibles, HttpStatus.OK);
-	}
-	
-	@RequestMapping(value = "/getFraisIncompressiblesById", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<FraisIncompressibles> getFraisIncompressiblesById(@RequestBody Integer id) {
-		FraisIncompressibles FraisIncompressibles = this.fraisIncompressiblesService.findByIdFraisIncompressible(id);
-		return new ResponseEntity<FraisIncompressibles>(FraisIncompressibles, HttpStatus.OK);
-	}
-	
-	@RequestMapping(value = "/FraisIncompressibless", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<List<FraisIncompressibles>> getAllFraisIncompressibless() {
-		List<FraisIncompressibles> FraisIncompressibless = this.fraisIncompressiblesService.findAllFraisIncompressible();
-		return new ResponseEntity<List<FraisIncompressibles>>(FraisIncompressibless, HttpStatus.OK);
+	@GetMapping(value = "/all")
+	public List<FraisIncompressibles> getAllfraisIncompressibles() {
+		List<FraisIncompressibles> fi = fraisIncompressiblesService.findAllFraisIncompressible();
+	return fi;
 	}
 
 }
