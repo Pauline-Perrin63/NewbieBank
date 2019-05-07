@@ -6,7 +6,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 @Entity
@@ -17,7 +20,9 @@ public class FraisIncompressibles implements Serializable{
 	private int IdFraisIncompressibles;
 	private String nomFrais;
 	private Double montantFrais;
+	@JsonIgnore
 	@ManyToOne
+	@JoinColumn(name = "id_compte")
 	private CompteBancaire compte;
 
 	public FraisIncompressibles() {

@@ -22,7 +22,7 @@ import com.adaming.service.IFraisIncompressiblesService;
 
 
 @RestController
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/fraisincompressibles")
 public class FraisIncompressiblesController {
 

@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Banque implements Serializable{
 
@@ -18,7 +20,8 @@ public class Banque implements Serializable{
 	private String nomBanque;
 	private String adresseBanque;
 	private String telBanque;
-	@OneToMany
+	@JsonIgnore
+	@OneToMany(mappedBy = "banque")
 	List <CompteBancaire> compte;
 
 	public Banque() {

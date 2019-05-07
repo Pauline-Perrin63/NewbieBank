@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
@@ -22,16 +23,17 @@ public class CompteBancaire implements Serializable {
 	private double solde;
 	private double decouvert;
 	private double plafond;
-	private String codeClient;
 	@ManyToOne
+	@JoinColumn(name = "id_client")
 	Client client;
 	@ManyToOne
+	@JoinColumn(name = "id_banque")
 	Banque banque;
-	@OneToMany
+	@OneToMany(mappedBy = "compte")
 	private List<FraisIncompressibles> frais;
-	@OneToMany
+	@OneToMany(mappedBy = "virementEmis")
 	private List<VirementBancaire> virementEmis;
-	@OneToMany
+	@OneToMany(mappedBy = "virementRecu")
 	private List<VirementBancaire> virementRecu;
 
 	public CompteBancaire() {
@@ -40,7 +42,7 @@ public class CompteBancaire implements Serializable {
 	}
 
 	public CompteBancaire(int idCompte, int codeCompte, Date dateCreation, double solde, double decouvert,
-			double plafond, String codeClient, Client client, Banque banque, List<FraisIncompressibles> frais,
+			double plafond,   Client client, Banque banque, List<FraisIncompressibles> frais,
 			List<VirementBancaire> virementEmis, List<VirementBancaire> virementRecu) {
 		super();
 		this.idCompte = idCompte;
@@ -49,23 +51,19 @@ public class CompteBancaire implements Serializable {
 		this.solde = solde;
 		this.decouvert = decouvert;
 		this.plafond = plafond;
-		this.codeClient = codeClient;
-		this.client = client;
+ 		this.client = client;
 		this.banque = banque;
 		this.frais = frais;
 		this.virementEmis = virementEmis;
 		this.virementRecu = virementRecu;
 	}
 
-
-
-
 	@Override
 	public String toString() {
 		return "CompteBancaire [idCompte=" + idCompte + ", codeCompte=" + codeCompte + ", dateCreation=" + dateCreation
-				+ ", solde=" + solde + ", decouvert=" + decouvert + ", plafond=" + plafond + ", codeClient="
-				+ codeClient + ", client=" + client + ", banque=" + banque + ", frais=" + frais + ", virementEmis=" + virementEmis
-				+ ", virementRecu=" + virementRecu + "]";
+				+ ", solde=" + solde + ", decouvert=" + decouvert + ", plafond=" + plafond + ", client=" + client
+				+ ", banque=" + banque + ", frais=" + frais + ", virementEmis=" + virementEmis + ", virementRecu="
+				+ virementRecu + "]";
 	}
 
 	public int getIdCompte() {
@@ -114,14 +112,6 @@ public class CompteBancaire implements Serializable {
 
 	public void setPlafond(double plafond) {
 		this.plafond = plafond;
-	}
-
-	public String getCodeClient() {
-		return codeClient;
-	}
-
-	public void setCodeClient(String codeClient) {
-		this.codeClient = codeClient;
 	}
 
 	public Client getClient() {
@@ -179,5 +169,6 @@ public class CompteBancaire implements Serializable {
 			return +solde;
 		} else {
 			return solde;
+		}
+	}
 }
-}}
