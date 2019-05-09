@@ -17,19 +17,23 @@ To install and run this project you need as requirements:
 
 Java JDK and JRE - Java 8 or a Higher version
 Maven - Maven 2 or a Higher version
-Setting up
+
+# Setting up
 To download the project, clone it from github using the next command:
 
-$ git clone https://github.com/Pauline-Perrin63/NewbieBank.git
-Running the tests
+$ git clone https://github.com/Pauline-Perrin63/NewbieBank.git*
+
+# Running the tests
 Navigate to the project directory and use the next command:
 
 $ mvn test 
-Installing
+
+# Installing
 To install the project use the next command:
 
 $ mvn install
-Running
+
+# Running
 To run the project use the next command:
 
 $ mvn spring-boot:run
