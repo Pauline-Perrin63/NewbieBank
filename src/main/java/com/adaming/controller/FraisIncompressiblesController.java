@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.adaming.model.FraisIncompressibles;
@@ -40,10 +41,10 @@ public class FraisIncompressiblesController {
 	
 	@PutMapping("/{id}")
 	public FraisIncompressibles updateFraisIncompressibles (@RequestBody FraisIncompressibles fraisIncompressibles, @PathVariable int id) {
-		if(fraisIncompressiblesService.updateFraisIncompressible(fraisIncompressibles)== null) {
+		if(fraisIncompressiblesService.findByIdFraisIncompressible(id)== null) {
 			return null;
 		} else {
-			return fraisIncompressiblesService.updateFraisIncompressible(fraisIncompressibles);
+			return fraisIncompressiblesService.saveFraisIncompressible(fraisIncompressibles);
 		}
 	}
 	@DeleteMapping("/{id}")

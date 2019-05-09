@@ -12,31 +12,36 @@ public class FraisIncompressiblesServiceImpl implements IFraisIncompressiblesSer
 	
 	@Autowired
 	IFraisIncompressiblesDao iFraisIncompressiblesDao;
+	
+	public FraisIncompressiblesServiceImpl(IFraisIncompressiblesDao iFraisIncompressiblesDao) {
+		// TODO Auto-generated constructor stub
+		this.iFraisIncompressiblesDao = iFraisIncompressiblesDao;
+	}
 
 	public FraisIncompressibles saveFraisIncompressible(FraisIncompressibles fi) {
 		// TODO Auto-generated method stub
-		return this.iFraisIncompressiblesDao.save(fi);
+		return iFraisIncompressiblesDao.save(fi);
 	}
 
 	public void deleteFraisIncompressible(FraisIncompressibles fi) {
 		// TODO Auto-generated method stub
-		this.iFraisIncompressiblesDao.delete(fi);
+		iFraisIncompressiblesDao.delete(fi);
 	}
 
 	public FraisIncompressibles updateFraisIncompressible(FraisIncompressibles fi) {
 		// TODO Auto-generated method stub
-		return this.iFraisIncompressiblesDao.save(fi);
+		return iFraisIncompressiblesDao.save(fi);
 	}
 
 
 	public List<FraisIncompressibles> findAllFraisIncompressible() {
 		// TODO Auto-generated method stub
-		return this.iFraisIncompressiblesDao.findAll();
+		return iFraisIncompressiblesDao.findAll();
 	}
 
 	public FraisIncompressibles findByIdFraisIncompressible(Integer id) {
 		// TODO Auto-generated method stub
-		return this.iFraisIncompressiblesDao.findById(id).orElse(null);
+		return iFraisIncompressiblesDao.findById(id).orElse(null);
 	}
 
 	
