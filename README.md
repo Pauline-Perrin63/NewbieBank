@@ -1,4 +1,4 @@
- NewbieBank
+# NewbieBank
 
 The NewbieBank application is based on the value of sharing in the bank.
 
@@ -9,10 +9,10 @@ The application's features are:
 
 bank's employe can do some stuff to their customers
 
-Getting Started
+# Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-Prerequisites
+# Prerequisites
 To install and run this project you need as requirements:
 
 Java JDK and JRE - Java 8 or a Higher version
@@ -33,7 +33,7 @@ Running
 To run the project use the next command:
 
 $ mvn spring-boot:run
-Technologies
+# Technologies
 Java EE - The web framework used
 Spring Boot - The framework used for Microservice Architecture
 Spring Data JPA - The framework used in the persistence Layer
@@ -41,7 +41,7 @@ Spring WebService - The framework used in the Rest Controller Layer
 JUnit - The framework used in the unit test
 Mockito - The framework used in the unit test
 Maven - Dependency Management
-Authors
+# Authors
 Pauline Perrin and Quentin Reymann
-License
+# License
 This project is licensed under the MIT License.
