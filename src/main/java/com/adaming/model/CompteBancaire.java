@@ -1,7 +1,6 @@
 package com.adaming.model;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -12,6 +11,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class CompteBancaire implements Serializable {
 
@@ -19,7 +20,7 @@ public class CompteBancaire implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idCompte;
 	private int codeCompte;
-	private Date dateCreation;
+	private String dateCreation;
 	private double solde;
 	private double decouvert;
 	private double plafond;
@@ -29,6 +30,7 @@ public class CompteBancaire implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "id_banque")
 	Banque banque;
+	@JsonIgnore
 	@OneToMany(mappedBy = "compte")
 	private List<FraisIncompressibles> frais;
 	@OneToMany(mappedBy = "virementEmis")
@@ -41,7 +43,7 @@ public class CompteBancaire implements Serializable {
 		// TODO Auto-generated constructor stub
 	}
 
-	public CompteBancaire(int idCompte, int codeCompte, Date dateCreation, double solde, double decouvert,
+	public CompteBancaire(int idCompte, int codeCompte, String dateCreation, double solde, double decouvert,
 			double plafond,   Client client, Banque banque, List<FraisIncompressibles> frais,
 			List<VirementBancaire> virementEmis, List<VirementBancaire> virementRecu) {
 		super();
@@ -82,11 +84,11 @@ public class CompteBancaire implements Serializable {
 		this.codeCompte = codeCompte;
 	}
 
-	public Date getDateCreation() {
+	public String getStringCreation() {
 		return dateCreation;
 	}
 
-	public void setDateCreation(Date dateCreation) {
+	public void setStringCreation(String dateCreation) {
 		this.dateCreation = dateCreation;
 	}
 

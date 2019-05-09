@@ -17,10 +17,9 @@ public class FraisIncompressibles implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int IdFraisIncompressibles;
+	private int idFraisIncompressibles;
 	private String nomFrais;
 	private Double montantFrais;
-	@JsonIgnore
 	@ManyToOne
 	@JoinColumn(name = "id_compte")
 	private CompteBancaire compte;
@@ -35,7 +34,7 @@ public class FraisIncompressibles implements Serializable{
 	public FraisIncompressibles(int idFraisIncompressibles, String nomFrais, Double montantFrais,
 			CompteBancaire compte) {
 		super();
-		IdFraisIncompressibles = idFraisIncompressibles;
+		this.idFraisIncompressibles = idFraisIncompressibles;
 		this.nomFrais = nomFrais;
 		this.montantFrais = montantFrais;
 		this.compte = compte;
@@ -44,10 +43,10 @@ public class FraisIncompressibles implements Serializable{
 
 
 	public int getIdFraisIncompressibles() {
-		return IdFraisIncompressibles;
+		return idFraisIncompressibles;
 	}
 	public void setIdFraisIncompressibles(int idFraisIncompressibles) {
-		IdFraisIncompressibles = idFraisIncompressibles;
+		this.idFraisIncompressibles = idFraisIncompressibles;
 	}
 	public String getNomFrais() {
 		return nomFrais;
@@ -77,9 +76,17 @@ public class FraisIncompressibles implements Serializable{
 
 	@Override
 	public String toString() {
-		return "FraisIncompressibles [IdFraisIncompressibles=" + IdFraisIncompressibles + ", nomFrais=" + nomFrais
-				+ ", montantFrais=" + montantFrais + "]";
+		return "FraisIncompressibles [idFraisIncompressibles=" + idFraisIncompressibles + ", nomFrais=" + nomFrais
+				+ ", montantFrais=" + montantFrais + ", compte=" + compte + "]";
 	}
+
+
+
+	
+
+
+
+	
 	
 	
 	
